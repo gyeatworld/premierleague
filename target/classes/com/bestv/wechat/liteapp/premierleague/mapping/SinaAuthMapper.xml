@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaAuthMapper">
+    <resultMap id="ResultMapSinaAuthAccessToken" type="com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken">
+        <id column="id" property="iId" jdbcType="VARCHAR"/>
+        <result column="access_token" property="strAccessToken" jdbcType="VARCHAR"/>
+        <result column="expires_in" property="strExpiresIn" jdbcType="VARCHAR"/>
+        <result column="uid" property="strUid" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        *
+    </sql>
+
+    <select id="getSinaAuthAccessToken" resultMap="ResultMapSinaAuthAccessToken"
+            parameterType="java.lang.String">
+        select * from liteapp_premierleague_sina_auth_accesstoken a
+        where a.id=#{0}
+    </select>
+
+    <insert id="createSinaAuthCode" parameterType="com.bestv.wechat.liteapp.premierleague.model.SinaAuthCode">
+        insert into liteapp_premierleague_sina_auth_code (code)
+        values (#{strCode,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateSinaAuthAccessToken"
+            parameterType="com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken">
+        update liteapp_premierleague_sina_auth_accesstoken a
+        set a.access_token = #{strAccessToken,jdbcType=VARCHAR},
+        a.expires_in=#{strExpiresIn,jdbcType=VARCHAR},
+        a.uid=#{strUid,jdbcType=VARCHAR}
+        where a.id=0
+    </update>
+</mapper>

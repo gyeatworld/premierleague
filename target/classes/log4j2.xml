@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <!-- 定义下面的引用名 -->
+    <Properties>
+        <property name="log_pattern">%d{yyyy-MM-dd HH:mm:ss SSS} %-5level %class{36} %t %n %msg%n</property>
+        <property name="fatal_name">logs/premierleague_fatal.log</property> <!-- FATAL级别 -->
+        <property name="error_name">logs/premierleague_error.log</property> <!-- ERROR级别 -->
+        <property name="warn_name">logs/premierleague_warn.log</property>
+        <property name="info_name">logs/premierleague_info.log</property>
+        <property name="debug_name">logs/premierleague_debug.log</property>
+        <property name="all_name">logs/premierleague_all.log</property>
+        <property name="fatal_rolling_file_name">logs/%d{yyyy-MM-dd}/premierleague_fatal-%d{yyyy-MM-dd}-%i.log.gz</property>
+        <property name="error_rolling_file_name">logs/%d{yyyy-MM-dd}/premierleague_error-%d{yyyy-MM-dd}-%i.log.gz</property>
+        <property name="warn_rolling_file_name">logs/%d{yyyy-MM-dd}/premierleague_warn-%d{yyyy-MM-dd}-%i.log.gz</property>
+        <property name="info_rolling_file_name">logs/%d{yyyy-MM-dd}/premierleague_info-%d{yyyy-MM-dd}-%i.log.gz</property>
+        <property name="debug_rolling_file_name">logs/%d{yyyy-MM-dd}/premierleague_debug-%d{yyyy-MM-dd}-%i.log.gz</property>
+        <property name="all_rolling_file_name">logs/%d{yyyy-MM-dd}/premierleague_all-%d{yyyy-MM-dd}-%i.log.gz</property>
+        <property name="every_file_size">100 MB</property><!-- 日志切割的最小单位 -->
+        <property name="output_log_level">info</property><!-- 日志输出级别 -->
+    </Properties>
+
+    <!--先定义所有的appender-->
+    <!--OFF、FATAL、ERROR、WARN、INFO、DEBUG、ALL-->
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <!--<ThresholdFilter level="${output_log_level}" onMatch="ACCEPT" onMismatch="DENY"/>  -->
+            <PatternLayout pattern="${log_pattern}"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="${fatal_name}"
+                     filePattern="${fatal_rolling_file_name}" append="false">
+            <PatternLayout pattern="${log_pattern}"/>
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <Filters>
+                <ThresholdFilter level="fatal" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <RollingFile name="RollingFile0" fileName="${error_name}"
+                     filePattern="${error_rolling_file_name}" append="false">
+            <PatternLayout pattern="${log_pattern}"/>
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <Filters>
+                <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <RollingFile name="RollingFile1" fileName="${warn_name}"
+                     filePattern="${warn_rolling_file_name}" append="false">
+            <PatternLayout pattern="${log_pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <RollingFile name="RollingFile2" fileName="${info_name}"
+                     filePattern="${info_rolling_file_name}" append="false">
+            <PatternLayout pattern="${log_pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <RollingFile name="RollingFile3" fileName="${debug_name}"
+                     filePattern="${debug_rolling_file_name}" append="false">
+            <PatternLayout pattern="${log_pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <RollingFile name="RollingFile4" fileName="${all_name}"
+                     filePattern="${all_rolling_file_name}" append="false">
+            <PatternLayout pattern="${log_pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="trace">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFile"/>
+            <appender-ref ref="RollingFile0"/>
+            <appender-ref ref="RollingFile1"/>
+            <appender-ref ref="RollingFile2"/>
+            <appender-ref ref="RollingFile3"/>
+            <appender-ref ref="RollingFile4"/>
+        </root>
+    </loggers>
+</configuration>
