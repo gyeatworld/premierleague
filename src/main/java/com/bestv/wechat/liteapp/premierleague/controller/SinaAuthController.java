@@ -2,7 +2,6 @@ package com.bestv.wechat.liteapp.premierleague.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken;
-import com.bestv.wechat.liteapp.premierleague.model.SinaAuthCode;
 import com.bestv.wechat.liteapp.premierleague.service.impl.SinaAuthService;
 import com.bestv.wechat.liteapp.premierleague.utility.AppConfigurationUtil;
 import com.bestv.wechat.liteapp.premierleague.utility.StringUtils;
@@ -10,15 +9,12 @@ import com.bestv.wechat.liteapp.premierleague.utility.WebUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/premierleague")
@@ -36,7 +32,7 @@ public class SinaAuthController {
     SinaAuthService sinaAuthService;
 
     @RequestMapping(value = "/auth2/callback", method = RequestMethod.GET)
-     void eceiveCode(HttpServletRequest request, HttpServletResponse response) {
+     void receiveCode(HttpServletRequest request) {
         logger.info("--------------------进入Sina的Auth流程-------------------");
         System.out.println(request.getServletPath());
         System.out.println(request.getQueryString());

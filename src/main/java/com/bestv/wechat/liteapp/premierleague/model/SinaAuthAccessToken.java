@@ -1,19 +1,21 @@
 package com.bestv.wechat.liteapp.premierleague.model;
 
+import java.sql.Timestamp;
+
 public class SinaAuthAccessToken {
-    private int id;
+    private int iId;
     private String strAccessToken;
     private String strUid;
     private String strExpiresIn;
     private long lCreateTime;
     private long lUpdateTime;
 
-    public int getId() {
-        return id;
+    public int getiId() {
+        return iId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setiId(int iId) {
+        this.iId = iId;
     }
 
     public String getStrAccessToken() {
@@ -44,15 +46,15 @@ public class SinaAuthAccessToken {
         return lCreateTime;
     }
 
-    public void setlCreateTime(long lCreateTime) {
-        this.lCreateTime = lCreateTime;
+    public void setlCreateTime(Timestamp lCreateTime) {
+        this.lCreateTime = lCreateTime.getTime() + (8 * 60 * 60 * 1000);
     }
 
     public long getlUpdateTime() {
         return lUpdateTime;
     }
 
-    public void setlUpdateTime(long lUpdateTime) {
-        this.lUpdateTime = lUpdateTime;
+    public void setlUpdateTime(Timestamp lUpdateTime) {
+        this.lUpdateTime = lUpdateTime.getTime() + (8 * 60 * 60 * 1000);
     }
 }

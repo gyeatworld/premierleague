@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaAuthMapper">
-    <resultMap id="ResultMapSinaAuthCode" type="com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken">
+    <resultMap id="ResultMapSinaAuthAccessToken" type="com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken">
         <id column="id" property="iId" jdbcType="VARCHAR"/>
         <result column="access_token" property="strAccessToken" jdbcType="VARCHAR"/>
         <result column="expires_in" property="strExpiresIn" jdbcType="VARCHAR"/>
         <result column="uid" property="strUid" jdbcType="VARCHAR"/>
-        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
-        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="create_time" property="lCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="lUpdateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         *
     </sql>
-
-    <select id="getSinaAuthCode" resultMap="ResultMapSinaAuthCode"
-            parameterType="java.lang.String">
-        select * from liteapp_premierleague_sina_auth_code a
-        where a.id=#{0}
-    </select>
-
-    <insert id="createSinaAuthCode" parameterType="com.bestv.wechat.liteapp.premierleague.model.SinaAuthCode">
-        insert into liteapp_premierleague_sina_auth_code (code)
-        values (#{strCode,jdbcType=VARCHAR})
-    </insert>
 
     <update id="updateSinaAuthAccessToken"
             parameterType="com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken">
@@ -33,4 +22,10 @@
         a.uid=#{strUid,jdbcType=VARCHAR}
         where a.id=0
     </update>
+
+    <select id="fetchSinaAuthAccessToken"
+            resultMap="ResultMapSinaAuthAccessToken">
+        select * from liteapp_premierleague_sina_auth_accesstoken a
+        where a.id=0
+    </select>
 </mapper>
