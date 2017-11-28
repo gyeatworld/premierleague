@@ -17,11 +17,11 @@ public class SinaAuthService implements ISinaAuthService {
     @Autowired
     private SinaAuthMapper sinaAuthMapper;
 
-    @Override
-    @WriteDataSource
-    public int createSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken) {
-        return 0;
-    }
+    //@Override
+    //@WriteDataSource
+    //public int createSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken) {
+     //   return 0;
+    //}
 
     @Override
     @WriteDataSource

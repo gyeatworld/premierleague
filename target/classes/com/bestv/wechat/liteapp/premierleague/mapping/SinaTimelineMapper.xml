@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaTimelineMapper">
+    <resultMap id="ResultMapSinaTimeline" type="com.bestv.wechat.liteapp.premierleague.model.SinaTimeline">
+        <id column="id" property="strId" jdbcType="VARCHAR"/>
+        <result column="text" property="strText" jdbcType="VARCHAR"/>
+        <result column="source" property="strSource" jdbcType="VARCHAR"/>
+        <result column="created_at" property="tCreatedAt" jdbcType="VARCHAR"/>
+        <result column="reposts_count" property="iRepostsCount" jdbcType="INTEGER"/>
+        <result column="comments_count" property="iCommentsCount" jdbcType="INTEGER"/>
+        <result column="sina_user_id" property="strSinaUserId" jdbcType="VARCHAR"/>
+        <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        *
+    </sql>
+
+    <sql id="Sina_Timeline_Column_List">
+        id,text,source,created_at,reposts_count,comments_count,sina_user_id
+    </sql>
+
+    <insert id="insertSinaTimeline" parameterType="java.util.List">
+        INSERT IGNORE INTO
+        liteapp_premierleague_sina_timeline
+        (
+        <include refid="Sina_Timeline_Column_List"/>
+        )
+        VALUES
+        <foreach collection="list" item="SinaTimeline" index="index" separator=",">
+            (
+            #{SinaTimeline.strId},
+            #{SinaTimeline.strText},
+            #{SinaTimeline.strSource},
+            #{SinaTimeline.tCreatedAt},
+            #{SinaTimeline.iRepostsCount},
+            #{SinaTimeline.iCommentsCount},
+            #{SinaTimeline.strSinaUserId}
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="fetchSinaTimeline"
+            resultMap="ResultMapSinaTimeline">
+        select * from liteapp_premierleague_sina_timeline a INNER JOIN liteapp_premierleague_sina_user u
+        ON a.sina_user_id=u.id
+    </select>
+</mapper>

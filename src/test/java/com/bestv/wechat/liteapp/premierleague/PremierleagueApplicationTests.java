@@ -1,9 +1,8 @@
 package com.bestv.wechat.liteapp.premierleague;
 
 
-import com.alibaba.fastjson.JSONArray;
-import com.bestv.wechat.liteapp.premierleague.function.SinaTimeLineFunction;
-import com.bestv.wechat.liteapp.premierleague.model.SinaTimeLine;
+import com.bestv.wechat.liteapp.premierleague.function.SinaTimelineFunction;
+import com.bestv.wechat.liteapp.premierleague.model.SinaTimeline;
 import com.bestv.wechat.liteapp.premierleague.utility.WebUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,7 +13,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -24,7 +28,7 @@ public class PremierleagueApplicationTests {
 	private Logger logger = LogManager.getLogger(PremierleagueApplicationTests.class);
 
 	@Autowired
-	SinaTimeLineFunction sinaTimeLineFunction;
+	SinaTimelineFunction sinaTimeLineFunction;
 	@Test
 	public void getCode() {
 		//获取code测试
@@ -49,7 +53,22 @@ public class PremierleagueApplicationTests {
 	@Test
 	public void getSinaTimeLine() {
 //		SinaTimeLineFunction sinaTimeLineFunction=new SinaTimeLineFunction();
-		ArrayList<SinaTimeLine> jsonArrayTimeLine=sinaTimeLineFunction.pullTimeLineFromSina();
+		sinaTimeLineFunction.pullTimelineFromSina();
+		System.out.println("-------Test Finish------");
+	}
+
+	@Test
+	public void otherTest() {
+		System.out.println("-------Test Begin------");
+		Date date =new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy", Locale.US);
+		Date d = null;
+		try {
+			d = sdf.parse(new Date().toString());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		System.out.println(d.toString());
 		System.out.println("-------Test Finish------");
 	}
 

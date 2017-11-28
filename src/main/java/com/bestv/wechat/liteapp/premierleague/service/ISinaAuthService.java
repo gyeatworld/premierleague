@@ -8,7 +8,7 @@ public interface ISinaAuthService {
 
     SinaAuthAccessToken fetchSinaAuthAccessToken();
 
-    int createSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken);
+    //int createSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken);
 
     int updateSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken);
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaTimelinePicMapper">
+    <resultMap id="ResultMapSinaTimelinePic" type="com.bestv.wechat.liteapp.premierleague.model.SinaTimelinePic">
+        <id column="id" property="lId" jdbcType="BIGINT"/>
+        <result column="sina_timeline_id" property="strSinaTimelineId" jdbcType="VARCHAR"/>
+        <result column="thumbnail_pic" property="strThumbnailPic" jdbcType="VARCHAR"/>
+        <result column="middle_pic" property="strMiddlePic" jdbcType="VARCHAR"/>
+        <result column="original_pic" property="strOriginalPic" jdbcType="VARCHAR"/>
+        <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        *
+    </sql>
+
+    <sql id="Sina_Timeline_Pic_Column_List">
+        sina_timeline_id,thumbnail_pic,middle_pic,original_pic
+    </sql>
+
+    <insert id="insertSinaTimelinePic" parameterType="java.util.List">
+        INSERT IGNORE INTO
+        liteapp_premierleague_sina_timeline_pic
+        (
+        <include refid="Sina_Timeline_Pic_Column_List"/>
+        )
+        VALUES
+        <foreach collection="list" item="SinaTimelinePic" index="index" separator=",">
+            (
+            #{SinaTimelinePic.strSinaTimelineId},
+            #{SinaTimelinePic.strThumbnailPic},
+            #{SinaTimelinePic.strMiddlePic},
+            #{SinaTimelinePic.strOriginalPic}
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="fetchSinaTimelinePic"
+            resultMap="ResultMapSinaTimelinePic">
+        select * from liteapp_premierleague_sina_timeline a INNER JOIN liteapp_premierleague_sina_user u
+        ON a.sina_user_id=u.id
+    </select>
+</mapper>

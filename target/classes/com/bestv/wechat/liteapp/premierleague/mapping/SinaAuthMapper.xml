@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaAuthMapper">
     <resultMap id="ResultMapSinaAuthAccessToken" type="com.bestv.wechat.liteapp.premierleague.model.SinaAuthAccessToken">
-        <id column="id" property="iId" jdbcType="VARCHAR"/>
+        <id column="id" property="iId" jdbcType="INTEGER"/>
         <result column="access_token" property="strAccessToken" jdbcType="VARCHAR"/>
         <result column="expires_in" property="strExpiresIn" jdbcType="VARCHAR"/>
         <result column="uid" property="strUid" jdbcType="VARCHAR"/>

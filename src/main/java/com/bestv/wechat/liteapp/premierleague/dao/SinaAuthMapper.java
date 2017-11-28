@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface SinaAuthMapper {
 
-    int createSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken);
+    //int createSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken);
 
     int updateSinaAuthAccessToken(SinaAuthAccessToken sinaAuthAccessToken);
 
