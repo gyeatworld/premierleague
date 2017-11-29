@@ -2,45 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7d82aa-b8a5-4ebc-b294-9d42d292ec59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelinePicMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaUserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelinePicMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaUserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/ResultJson.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimelinePic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaTimelinePicService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaUserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimelinePicService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaUserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/utility/DateUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/utility/ResponseUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/controller/SinaTimeLineController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/controller/SinaTimelineController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimeLineMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelineMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimeLineFunction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeLine.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaTimeLineService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaTimelineService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimeLineService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimelineService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/controller/SinaTimeLineController.class" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/controller/SinaTimeLineController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/dao/SinaAuthMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/dao/SinaAuthMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/service/ISinaAuthService.class" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/service/ISinaAuthService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/service/impl/SinaAuthService.class" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/service/impl/SinaAuthService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.class" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.class" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/premierleague_all.log" afterPath="$PROJECT_DIR$/logs/premierleague_all.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/premierleague_debug.log" afterPath="$PROJECT_DIR$/logs/premierleague_debug.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/premierleague_info.log" afterPath="$PROJECT_DIR$/logs/premierleague_info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaAuthMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaAuthMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaAuthMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaAuthMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaAuthService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaAuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaAuthService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaAuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/app.properties" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app.properties" afterPath="$PROJECT_DIR$/target/classes/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/mapping/SinaAuthMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/mapping/SinaAuthMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java" afterPath="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,26 +29,24 @@
       <file leaf-file-name="SinaTimelineFunction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+            <state relative-caret-position="276">
+              <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2193#2207#0" expanded="true" />
-                <element signature="e#2274#2291#0" expanded="true" />
-                <element signature="e#2344#2354#0" expanded="true" />
-                <element signature="e#4254#4262#0" expanded="true" />
-                <element signature="e#6711#6712#0" expanded="true" />
-                <element signature="e#6769#6770#0" expanded="true" />
+                <element signature="e#2196#2210#0" expanded="true" />
+                <element signature="e#2277#2294#0" expanded="true" />
+                <element signature="e#2347#2357#0" expanded="true" />
+                <element signature="e#4417#4425#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <file leaf-file-name="SinaTimelineMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelineMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -86,10 +55,25 @@
       <file leaf-file-name="SinaTimelineMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="380">
+              <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
               <folding>
-                <marker date="1511863212360" expanded="true" signature="1992:2119" ph="select * fro... liteapp_premierleague_sina_timeline" />
+                <marker date="1511920603750" expanded="true" signature="2142:2269" ph="select * fro... liteapp_premierleague_sina_timeline" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SinaTimeline.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="31" />
+              <folding>
+                <element signature="e#1719#1720#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+                <element signature="e#1816#1817#0" expanded="true" />
+                <element signature="e#1870#1871#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,32 +82,10 @@
       <file leaf-file-name="PremierleagueApplicationTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrameworkMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersistenceException.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/exceptions/PersistenceException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#1009#1010#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,8 +94,8 @@
       <file leaf-file-name="SinaTimelinePicMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelinePicMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="129">
+              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <marker date="1511866755403" expanded="true" signature="1784:1911" ph="select * fro... liteapp_premierleague_sina_timeline" />
               </folding>
@@ -145,22 +107,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimelinePicService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#850#851#0" expanded="true" />
                 <element signature="e#877#878#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SinaUserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaUserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="40" lean-forward="false" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-              <folding>
-                <marker date="1511866423805" expanded="true" signature="2662:2789" ph="select * fro... liteapp_premierleague_sina_timeline" />
               </folding>
             </state>
           </provider>
@@ -243,19 +193,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/ISinaUserService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/utility/ResponseUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/ResultJson.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelineMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimelineService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimelinePic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelinePicMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelinePicMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimelinePicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java" />
       </list>
     </option>
@@ -272,6 +222,12 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
@@ -295,10 +251,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -530,6 +486,7 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -842,43 +799,44 @@
       <workItem from="1511741665877" duration="22836000" />
       <workItem from="1511841811715" duration="84000" />
       <workItem from="1511841920408" duration="17603000" />
+      <workItem from="1511914858689" duration="4256000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.27 at 15h 54m 35s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 09h 44m 40s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 14h 22m 26s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 10h 05m 37s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 01m 00s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 10h 06m 56s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 10m 49s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 10h 08m 36s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 18m 43s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 12h 01m 56s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 19m 54s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 12h 04m 20s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 27m 03s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 12h 04m 48s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 28m 11s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 12h 05m 12s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 32m 00s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 15h 30m 51s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.28 at 19h 33m 04s.xml">
+    <history-entry file="PremierleagueApplicationTests_getSinaTimeLine - 2017.11.29 at 15h 31m 16s.xml">
       <configuration name="PremierleagueApplicationTests.getSinaTimeLine" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127534000" />
+    <option name="totallyTimeSpent" value="131790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,6 +849,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -899,16 +858,17 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30543634" sideWeight="0.4950249" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30972818" sideWeight="0.4950249" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -920,7 +880,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1218,7 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1081">
           <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,7 +1243,7 @@
         <state relative-caret-position="90">
           <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1298,20 +1255,6 @@
           <folding>
             <element signature="e#152#153#0" expanded="false" />
             <element signature="e#177#178#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1337,8 +1280,8 @@
         <state relative-caret-position="225">
           <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1348,9 +1291,9 @@
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#771#772#0" expanded="false" />
+            <element signature="e#798#799#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1363,22 +1306,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelineMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimelinePic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
           <folding>
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1388,24 +1323,24 @@
         <state relative-caret-position="793">
           <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding>
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2927#2928#0" expanded="true" />
-            <element signature="e#2984#2985#0" expanded="true" />
-            <element signature="e#3030#3031#0" expanded="true" />
-            <element signature="e#3071#3072#0" expanded="true" />
-            <element signature="e#3105#3106#0" expanded="true" />
-            <element signature="e#3162#3163#0" expanded="true" />
-            <element signature="e#3208#3209#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1202#1203#0" expanded="false" />
+            <element signature="e#1235#1236#0" expanded="false" />
+            <element signature="e#1264#1265#0" expanded="false" />
+            <element signature="e#1308#1309#0" expanded="false" />
+            <element signature="e#1344#1345#0" expanded="false" />
+            <element signature="e#1384#1385#0" expanded="false" />
+            <element signature="e#1420#1421#0" expanded="false" />
+            <element signature="e#1478#1479#0" expanded="false" />
+            <element signature="e#1528#1529#0" expanded="false" />
+            <element signature="e#2893#2894#0" expanded="false" />
+            <element signature="e#2927#2928#0" expanded="false" />
+            <element signature="e#2984#2985#0" expanded="false" />
+            <element signature="e#3030#3031#0" expanded="false" />
+            <element signature="e#3071#3072#0" expanded="false" />
+            <element signature="e#3105#3106#0" expanded="false" />
+            <element signature="e#3162#3163#0" expanded="false" />
+            <element signature="e#3208#3209#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1425,7 +1360,7 @@
         <state relative-caret-position="210">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1438,20 +1373,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelinePicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <marker date="1511866755403" expanded="true" signature="1784:1911" ph="select * fro... liteapp_premierleague_sina_timeline" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/service/impl/SinaTimelinePicService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#850#851#0" expanded="true" />
             <element signature="e#877#878#0" expanded="true" />
@@ -1461,29 +1386,9 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="330">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding>
-            <marker date="1511863212360" expanded="true" signature="1992:2119" ph="select * fro... liteapp_premierleague_sina_timeline" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1495,18 +1400,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/bestv/wechat/liteapp/premierleague/PremierleagueApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+        <state relative-caret-position="225">
+          <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2193#2207#0" expanded="true" />
-            <element signature="e#2274#2291#0" expanded="true" />
-            <element signature="e#2344#2354#0" expanded="true" />
-            <element signature="e#4254#4262#0" expanded="true" />
-            <element signature="e#6711#6712#0" expanded="true" />
-            <element signature="e#6769#6770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/model/SinaTimeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelinePicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <marker date="1511866755403" expanded="true" signature="1784:1911" ph="select * fro... liteapp_premierleague_sina_timeline" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/dao/SinaTimelineMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/mapping/SinaTimelineMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding>
+            <marker date="1511920603750" expanded="true" signature="2142:2269" ph="select * fro... liteapp_premierleague_sina_timeline" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bestv/wechat/liteapp/premierleague/function/SinaTimelineFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2196#2210#0" expanded="true" />
+            <element signature="e#2277#2294#0" expanded="true" />
+            <element signature="e#2347#2357#0" expanded="true" />
+            <element signature="e#4417#4425#0" expanded="true" />
           </folding>
         </state>
       </provider>

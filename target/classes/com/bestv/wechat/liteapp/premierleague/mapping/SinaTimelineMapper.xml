@@ -8,6 +8,7 @@
         <result column="created_at" property="tCreatedAt" jdbcType="VARCHAR"/>
         <result column="reposts_count" property="iRepostsCount" jdbcType="INTEGER"/>
         <result column="comments_count" property="iCommentsCount" jdbcType="INTEGER"/>
+        <result column="attitudes_count" property="iAttitudesCount" jdbcType="INTEGER"/>
         <result column="sina_user_id" property="strSinaUserId" jdbcType="VARCHAR"/>
         <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
         <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
@@ -18,7 +19,7 @@
     </sql>
 
     <sql id="Sina_Timeline_Column_List">
-        id,text,source,created_at,reposts_count,comments_count,sina_user_id
+        id,text,source,created_at,reposts_count,comments_count,attitudes_count,sina_user_id
     </sql>
 
     <insert id="insertSinaTimeline" parameterType="java.util.List">
@@ -36,6 +37,7 @@
             #{SinaTimeline.tCreatedAt},
             #{SinaTimeline.iRepostsCount},
             #{SinaTimeline.iCommentsCount},
+            #{SinaTimeline.iAttitudesCount},
             #{SinaTimeline.strSinaUserId}
             )
         </foreach>

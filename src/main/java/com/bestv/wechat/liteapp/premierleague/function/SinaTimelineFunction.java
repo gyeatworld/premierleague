@@ -41,7 +41,7 @@ public class SinaTimelineFunction {
         //SinaAuthAccessToken sinaAuthAccessToken=sinaAuthService.fetchSinaAuthAccessToken();
         //String strAccessToken=sinaAuthAccessToken.getStrAccessToken();
         String strAccessToken = "2.00gPHyGCGZPleDc44e41c29fwGX5MB";
-        String strPrarm = "access_token=" + strAccessToken+"&page=3";
+        String strPrarm = "access_token=" + strAccessToken+"&count=100";
         //获取博文
         String strResult = WebUtils.sendGet(SINA_TIME_LINE_URL, strPrarm);
         JSONObject joResult = JSONObject.parseObject(strResult);
@@ -70,6 +70,7 @@ public class SinaTimelineFunction {
             String strCreateAt=joTimeline.getString("created_at");
             String strRepostsCount=joTimeline.getString("reposts_count");
             String strCommentsCount=joTimeline.getString("comments_count");
+            String strAttitudesCount=joTimeline.getString("attitudes_count");
             String strUserId=joSinaUser.getString("id");
             /****************封装微博博文******************/
             //如果包含视频，则放弃该条微博
@@ -86,6 +87,7 @@ public class SinaTimelineFunction {
             sinaTimeline.setStrSource("新浪微博");
             sinaTimeline.setiRepostsCount(Integer.parseInt(strRepostsCount));
             sinaTimeline.setiCommentsCount(Integer.parseInt(strCommentsCount));
+            sinaTimeline.setiAttitudesCount(Integer.parseInt(strAttitudesCount));
             sinaTimeline.setStrSinaUserId(strUserId);
             liSinaTimeline.add(sinaTimeline);
 

@@ -12,6 +12,7 @@ public class SinaTimeline {
     private String strSource;//来源
     private int iRepostsCount;//转发数
     private int iCommentsCount;//评论数
+    private int iAttitudesCount;
     private String strSinaUserId;//微博作者的用户信息字段
     private Timestamp tCreateTime;
     private Timestamp tUpdateTime;
@@ -72,6 +73,14 @@ public class SinaTimeline {
         this.iCommentsCount = iCommentsCount;
     }
 
+
+    public int getiAttitudesCount() {
+        return iAttitudesCount;
+    }
+
+    public void setiAttitudesCount(int iAttitudesCount) {
+        this.iAttitudesCount = iAttitudesCount;
+    }
 
     public String getStrSinaUserId() {
         return strSinaUserId;
