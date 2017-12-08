@@ -5,24 +5,26 @@ import java.util.List;
 
 public class SinaTimeline {
 
-    private String strId;//微博ID
+    private long lId;//微博ID
     private String strText;//微博信息内容
-    private List<String> liPicUrl;
+    //private List<SinaTimelinePic> liPicUrl;
     private Timestamp tCreatedAt;//微博创建时间
     private String strSource;//来源
     private int iRepostsCount;//转发数
     private int iCommentsCount;//评论数
     private int iAttitudesCount;
     private String strSinaUserId;//微博作者的用户信息字段
+    private SinaUser sinaUser;
+    private String strPicUrls;
     private Timestamp tCreateTime;
     private Timestamp tUpdateTime;
 
-    public String getStrId() {
-        return strId;
+    public long getlId() {
+        return lId;
     }
 
-    public void setStrId(String strId) {
-        this.strId = strId;
+    public void setlId(long lId) {
+        this.lId = lId;
     }
 
     public String getStrText() {
@@ -32,15 +34,15 @@ public class SinaTimeline {
     public void setStrText(String strText) {
         this.strText = strText;
     }
-
-    public List<String> getLiPicUrl() {
+/*
+    public List<SinaTimelinePic> getLiPicUrl() {
         return liPicUrl;
     }
 
-    public void setLiPicUrl(List<String> liPicUrl) {
+    public void setLiPicUrl(List<SinaTimelinePic> liPicUrl) {
         this.liPicUrl = liPicUrl;
     }
-
+*/
     public String getStrSource() {
         return strSource;
     }
@@ -88,6 +90,22 @@ public class SinaTimeline {
 
     public void setStrSinaUserId(String strSinaUserId) {
         this.strSinaUserId = strSinaUserId;
+    }
+
+    public SinaUser getSinaUser() {
+        return sinaUser;
+    }
+
+    public void setSinaUser(SinaUser sinaUser) {
+        this.sinaUser = sinaUser;
+    }
+
+    public String getStrPicUrls() {
+        return strPicUrls;
+    }
+
+    public void setStrPicUrls(String strPicUrls) {
+        this.strPicUrls = strPicUrls;
     }
 
     public Timestamp gettCreateTime() {

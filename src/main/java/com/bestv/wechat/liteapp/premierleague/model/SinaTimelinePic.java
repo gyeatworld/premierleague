@@ -3,21 +3,12 @@ package com.bestv.wechat.liteapp.premierleague.model;
 import java.sql.Timestamp;
 
 public class SinaTimelinePic {
-    private long lId;
     private String strSinaTimelineId;
     private String strThumbnailPic;
     private String strMiddlePic;
     private String strOriginalPic;
     private Timestamp tCreateTime;
     private Timestamp tUpdateTime;
-
-    public long getlId() {
-        return lId;
-    }
-
-    public void setlId(long lId) {
-        this.lId = lId;
-    }
 
     public String getStrSinaTimelineId() {
         return strSinaTimelineId;

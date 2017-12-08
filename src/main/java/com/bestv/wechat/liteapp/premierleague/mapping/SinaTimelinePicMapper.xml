@@ -2,9 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaTimelinePicMapper">
     <resultMap id="ResultMapSinaTimelinePic" type="com.bestv.wechat.liteapp.premierleague.model.SinaTimelinePic">
-        <id column="id" property="lId" jdbcType="BIGINT"/>
+        <id column="thumbnail_pic" property="strThumbnailPic" jdbcType="VARCHAR"/>
         <result column="sina_timeline_id" property="strSinaTimelineId" jdbcType="VARCHAR"/>
-        <result column="thumbnail_pic" property="strThumbnailPic" jdbcType="VARCHAR"/>
         <result column="middle_pic" property="strMiddlePic" jdbcType="VARCHAR"/>
         <result column="original_pic" property="strOriginalPic" jdbcType="VARCHAR"/>
         <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>

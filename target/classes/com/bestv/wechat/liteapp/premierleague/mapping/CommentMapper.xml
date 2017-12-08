@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.CommentMapper">
+    <resultMap id="ResultMapComment" type="com.bestv.wechat.liteapp.premierleague.model.Comment">
+        <id column="id" property="lId" jdbcType="BIGINT"/>
+        <result column="text" property="strText" jdbcType="VARCHAR"/>
+        <result column="source" property="strSource" jdbcType="VARCHAR"/>
+        <result column="created_at" property="tCreatedAt" jdbcType="VARCHAR"/>
+        <result column="reposts_count" property="iRepostsCount" jdbcType="INTEGER"/>
+        <result column="comments_count" property="iCommentsCount" jdbcType="INTEGER"/>
+        <result column="attitudes_count" property="iAttitudesCount" jdbcType="INTEGER"/>
+        <result column="sina_user_id" property="strSinaUserId" jdbcType="VARCHAR"/>
+        <result column="pic_urls" property="strPicUrls" jdbcType="VARCHAR"/>
+        <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        *
+    </sql>
+
+    <sql id="Comment_Column_List">
+        topic_id, open_id, user_info, text, source
+    </sql>
+
+    <insert id="insertComment" parameterType="com.bestv.wechat.liteapp.premierleague.model.Comment">
+        insert into
+        liteapp_premierleague_comment (
+        <include refid="Comment_Column_List"/>
+        )
+        values (
+        #{lTopicId,jdbcType=BIGINT}, #{strOpenId,jdbcType=VARCHAR},
+        #{strUserInfo,jdbcType=VARCHAR}, #{strText,jdbcType=VARCHAR},
+        #{iSource,jdbcType=INTEGER}
+        )
+    </insert>
+
+    <select id="fetchCommentByTopicId"
+            resultMap="ResultMapComment">
+        SELECT * FROM  liteapp_premierleague_comment a
+        WHERE a.topic_id=#{0}
+    </select>
+
+</mapper>

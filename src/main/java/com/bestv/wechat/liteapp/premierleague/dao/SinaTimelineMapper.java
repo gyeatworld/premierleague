@@ -10,7 +10,10 @@ import java.util.List;
 @Mapper
 @Repository
 public interface SinaTimelineMapper {
-    List<SinaTimeline> fetchSinaTimeline();
+
+    List<SinaTimeline> fetchSinaTimelineWithoutRange(int iPageNum,int iPageSize);
+
+    List<SinaTimeline> fetchSinaTimeline(long iRange);
 
     int insertSinaTimeline(List<SinaTimeline> liSinaTimeline);
 }

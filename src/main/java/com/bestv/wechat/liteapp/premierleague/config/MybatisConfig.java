@@ -23,6 +23,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
@@ -41,7 +42,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @EnableTransactionManagement
 @AutoConfigureAfter(DataSourceConfig.class)
 @MapperScan(basePackages = "com.bestv.wechat.liteapp.premierleague.dao")
-public class MybatisConfig {
+public class MybatisConfig implements TransactionManagementConfigurer {
     private static Logger log = LogManager.getLogger(MybatisConfig.class);
 
     @Value("${spring.datasource.readSize}")

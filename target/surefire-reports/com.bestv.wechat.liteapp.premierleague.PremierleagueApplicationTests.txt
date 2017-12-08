@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.bestv.wechat.liteapp.premierleague.PremierleagueApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.237 sec - in com.bestv.wechat.liteapp.premierleague.PremierleagueApplicationTests

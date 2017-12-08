@@ -2,19 +2,18 @@ package com.bestv.wechat.liteapp.premierleague.model;
 
 import java.sql.Timestamp;
 
-public class UserInfo {
-    private long lId;
+public class User {
+    private String strId;
     private String strOpenId;
-    private String strEncryptedOpenId;
     private Timestamp tsCreateTime;
     private Timestamp tsUpdateTime;
 
-    public long getlId() {
-        return lId;
+    public String getStrId() {
+        return strId;
     }
 
-    public void setlId(long lId) {
-        this.lId = lId;
+    public void setStrId(String strId) {
+        this.strId = strId;
     }
 
     public String getStrOpenId() {
@@ -23,14 +22,6 @@ public class UserInfo {
 
     public void setStrOpenId(String strOpenId) {
         this.strOpenId = strOpenId;
-    }
-
-    public String getStrEncryptedOpenId() {
-        return strEncryptedOpenId;
-    }
-
-    public void setStrEncryptedOpenId(String strEncryptedOpenId) {
-        this.strEncryptedOpenId = strEncryptedOpenId;
     }
 
     public Timestamp getTsCreateTime() {

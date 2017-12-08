@@ -14,6 +14,7 @@ import com.bestv.wechat.liteapp.premierleague.utility.DateUtils;
 import com.bestv.wechat.liteapp.premierleague.utility.JSONUtil;
 import com.bestv.wechat.liteapp.premierleague.utility.WebUtils;
 
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -41,7 +42,7 @@ public class SinaTimelineFunction {
         //SinaAuthAccessToken sinaAuthAccessToken=sinaAuthService.fetchSinaAuthAccessToken();
         //String strAccessToken=sinaAuthAccessToken.getStrAccessToken();
         String strAccessToken = "2.00gPHyGCGZPleDc44e41c29fwGX5MB";
-        String strPrarm = "access_token=" + strAccessToken+"&count=100";
+        String strPrarm = "access_token=" + strAccessToken+"&count=150";
         //获取博文
         String strResult = WebUtils.sendGet(SINA_TIME_LINE_URL, strPrarm);
         JSONObject joResult = JSONObject.parseObject(strResult);
@@ -50,7 +51,7 @@ public class SinaTimelineFunction {
 
 
         List<SinaTimeline> liSinaTimeline = new ArrayList<SinaTimeline>();
-        List<SinaTimelinePic> liSinaTimelinePic = new ArrayList<SinaTimelinePic>();
+        //List<SinaTimelinePic> liSinaTimelinePic = new ArrayList<SinaTimelinePic>();
         List<SinaUser> liSinaUser = new ArrayList<SinaUser>();
 
         //分析、打包数据
@@ -64,8 +65,18 @@ public class SinaTimelineFunction {
             //获取用户、获取图片
             JSONObject joSinaUser = JSONObject.parseObject(joTimeline.getString("user"));
             JSONArray jaSinaPic = JSONArray.parseArray(joTimeline.getString("pic_urls"));
+            JSONArray jaPicUrls=new JSONArray();
+            //生成中图和大图
+            Iterator iteratorPic = jaSinaPic.iterator();
+            while(iteratorPic.hasNext()){
+                JSONObject joSinaPic=(JSONObject)iteratorPic.next();
+                String strThumbnailPicUrl=joSinaPic.getString("thumbnail_pic");
+                joSinaPic.put("middle_pic",strThumbnailPicUrl.replace("thumbnail","bmiddle"));
+                joSinaPic.put("large_pic",strThumbnailPicUrl.replace("thumbnail","large"));
+                jaPicUrls.add(joSinaPic);
+            }
 
-            String strId=joTimeline.getString("idstr");
+            long lId=Long.parseLong(joTimeline.getString("idstr"));
             String strText=joTimeline.getString("text");
             String strCreateAt=joTimeline.getString("created_at");
             String strRepostsCount=joTimeline.getString("reposts_count");
@@ -78,7 +89,7 @@ public class SinaTimelineFunction {
             //    continue;
             //}
             sinaTimeline.setStrText(strText);
-            sinaTimeline.setStrId(strId);
+            sinaTimeline.setlId(lId);
             //把String类型的格林威治时间转换成java.sql.Timestamp
             Date dCreatedAt=DateUtils.praseGMTStringToDate(strCreateAt);
             Timestamp tCreatedAt=DateUtils.praseDateToTimestamp(dCreatedAt);
@@ -89,6 +100,7 @@ public class SinaTimelineFunction {
             sinaTimeline.setiCommentsCount(Integer.parseInt(strCommentsCount));
             sinaTimeline.setiAttitudesCount(Integer.parseInt(strAttitudesCount));
             sinaTimeline.setStrSinaUserId(strUserId);
+            sinaTimeline.setStrPicUrls(jaPicUrls.toString());
             liSinaTimeline.add(sinaTimeline);
 
             /****************封装微博用户******************/
@@ -119,6 +131,7 @@ public class SinaTimelineFunction {
             }
 
             /****************封装微博图片******************/
+            /*
             Iterator iteratorPic = jaSinaPic.iterator();
             while(iteratorPic.hasNext()){
                 JSONObject joSinaPic=(JSONObject)iteratorPic.next();
@@ -129,7 +142,7 @@ public class SinaTimelineFunction {
                 sinaTimelinePic.setStrOriginalPic(strThumbnailPicUrl.replace("thumbnail","large"));
                 sinaTimelinePic.setStrSinaTimelineId(strId);
                 liSinaTimelinePic.add(sinaTimelinePic);
-            }
+            }*/
 
         }
 
@@ -139,10 +152,13 @@ public class SinaTimelineFunction {
         //保存微博用户
         saveSinaUser(liSinaUser);
         //保存微博图片
-        saveSinaTimelinePic(liSinaTimelinePic);
+        //saveSinaTimelinePic(liSinaTimelinePic);
 
     }
 
+    public PageInfo getTimeline(int iPageNum, int iPageSize){
+        return sinaTimelineService.fetchSinaTimeline(iPageNum,iPageSize);
+    }
     public void saveSinaUser(List<SinaUser> liSinaUser){
         sinaUserService.insertSinaUser(liSinaUser);
     }
@@ -150,7 +166,9 @@ public class SinaTimelineFunction {
         sinaTimelinePicService.insertSinaTimelinePic(liSinaTimelinePic);
     }
     public void saveSinaTimeline(List<SinaTimeline> liSinaTimeline){
-        sinaTimelineService.insertSinaTimeLine(liSinaTimeline);
+        sinaTimelineService.insertSinaTimeline(liSinaTimeline);
     }
+
+
 
 }

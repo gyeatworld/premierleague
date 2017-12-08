@@ -184,6 +184,13 @@
             <version>4.3.12.RELEASE</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -198,6 +205,13 @@
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
                 </includes>
             </resource>
         </resources>
