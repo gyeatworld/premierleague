@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.SinaTimelineMapper">
+    <resultMap id="ResultMapSinaTimeline" type="com.bestv.wechat.liteapp.premierleague.model.SinaTimeline">
+        <id column="id" property="lId" jdbcType="BIGINT"/>
+        <result column="text" property="strText" jdbcType="VARCHAR"/>
+        <result column="source" property="strSource" jdbcType="VARCHAR"/>
+        <result column="created_at" property="tCreatedAt" jdbcType="VARCHAR"/>
+        <result column="reposts_count" property="iRepostsCount" jdbcType="INTEGER"/>
+        <result column="comments_count" property="iCommentsCount" jdbcType="INTEGER"/>
+        <result column="attitudes_count" property="iAttitudesCount" jdbcType="INTEGER"/>
+        <result column="sina_user_id" property="strSinaUserId" jdbcType="VARCHAR"/>
+        <result column="pic_urls" property="strPicUrls" jdbcType="VARCHAR"/>
+        <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
+        <association property="sinaUser" javaType="com.bestv.wechat.liteapp.premierleague.model.SinaUser">
+            <id column="id" property="strId" jdbcType="VARCHAR"/>
+            <result column="screen_name" property="strScreenName" jdbcType="VARCHAR"/>
+            <result column="description" property="strDescription" jdbcType="VARCHAR"/>
+            <result column="url" property="strUrl" jdbcType="VARCHAR"/>
+            <result column="profile_url" property="strProfileUrl" jdbcType="VARCHAR"/>
+            <result column="profile_image_url" property="strProfileImageUrl" jdbcType="VARCHAR"/>
+            <result column="avatar_large" property="strAvatarLarge" jdbcType="VARCHAR"/>
+            <result column="avatar_hd" property="strAvatarHd" jdbcType="VARCHAR"/>
+            <result column="followers_count" property="iFollowersCount" jdbcType="INTEGER"/>
+            <result column="friends_count" property="iFriendsCount" jdbcType="INTEGER"/>
+            <result column="statuses_count" property="iStatusesCount" jdbcType="INTEGER"/>
+            <result column="favourites_count" property="iFavouritesCount" jdbcType="INTEGER"/>
+            <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
+            <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
+        </association>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        *
+    </sql>
+
+    <sql id="Sina_Timeline_Column_List">
+        id,text,source,created_at,reposts_count,comments_count,attitudes_count,sina_user_id,pic_urls
+    </sql>
+
+    <insert id="insertSinaTimeline" parameterType="java.util.List">
+        INSERT IGNORE INTO
+        liteapp_premierleague_sina_timeline
+        (
+        <include refid="Sina_Timeline_Column_List"/>
+        )
+        VALUES
+        <foreach collection="list" item="SinaTimeline" index="index" separator=",">
+            (
+            #{SinaTimeline.lId},
+            #{SinaTimeline.strText},
+            #{SinaTimeline.strSource},
+            #{SinaTimeline.tCreatedAt},
+            #{SinaTimeline.iRepostsCount},
+            #{SinaTimeline.iCommentsCount},
+            #{SinaTimeline.iAttitudesCount},
+            #{SinaTimeline.strSinaUserId},
+            #{SinaTimeline.strPicUrls}
+            )
+        </foreach>
+    </insert>
+
+    <select id="fetchSinaTimelineWithoutRange"
+            resultMap="ResultMapSinaTimeline">
+        select * from liteapp_premierleague_sina_timeline a
+        INNER JOIN liteapp_premierleague_sina_user u
+        ON u.id=a.sina_user_id
+    </select>
+
+    <select id="fetchSinaTimeline"
+            resultMap="ResultMapSinaTimeline">
+        SELECT * from liteapp_premierleague_sina_timeline a
+        INNER JOIN liteapp_premierleague_sina_user u
+        ON u.id=a.sina_user_id where a.id&lt;=#{0}
+    </select>
+</mapper>
