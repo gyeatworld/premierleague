@@ -3,14 +3,13 @@
 <mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.CommentMapper">
     <resultMap id="ResultMapComment" type="com.bestv.wechat.liteapp.premierleague.model.Comment">
         <id column="id" property="lId" jdbcType="BIGINT"/>
+        <result column="topic_id" property="lTopicId" jdbcType="VARCHAR"/>
+        <result column="open_id" property="strOpenId" jdbcType="VARCHAR"/>
+        <result column="user_info" property="strUserInfo" jdbcType="VARCHAR"/>
         <result column="text" property="strText" jdbcType="VARCHAR"/>
-        <result column="source" property="strSource" jdbcType="VARCHAR"/>
-        <result column="created_at" property="tCreatedAt" jdbcType="VARCHAR"/>
-        <result column="reposts_count" property="iRepostsCount" jdbcType="INTEGER"/>
-        <result column="comments_count" property="iCommentsCount" jdbcType="INTEGER"/>
-        <result column="attitudes_count" property="iAttitudesCount" jdbcType="INTEGER"/>
-        <result column="sina_user_id" property="strSinaUserId" jdbcType="VARCHAR"/>
-        <result column="pic_urls" property="strPicUrls" jdbcType="VARCHAR"/>
+        <result column="source" property="iSource" jdbcType="INTEGER"/>
+        <result column="thumbsup_count" property="iThumbsupCount" jdbcType="INTEGER"/>
+        <result column="status" property="iThumbsupAble" jdbcType="INTEGER"/>
         <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
         <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
@@ -23,7 +22,11 @@
         topic_id, open_id, user_info, text, source
     </sql>
 
-    <insert id="insertComment" parameterType="com.bestv.wechat.liteapp.premierleague.model.Comment">
+    <sql id="Comment_Thumbsup_Column_List">
+        open_id, comment_id
+    </sql>
+
+    <insert id="insertComment" useGeneratedKeys="true" keyProperty="lId" parameterType="com.bestv.wechat.liteapp.premierleague.model.Comment">
         insert into
         liteapp_premierleague_comment (
         <include refid="Comment_Column_List"/>
@@ -38,7 +41,30 @@
     <select id="fetchCommentByTopicId"
             resultMap="ResultMapComment">
         SELECT * FROM  liteapp_premierleague_comment a
-        WHERE a.topic_id=#{0}
+        left join liteapp_premierleague_comment_thumbsup c
+        on a.id=c.comment_id
+        and c.open_id=#{arg1}
+        WHERE a.topic_id=#{arg0}
+        order by a.create_time DESC
     </select>
+    <insert id="thumbsupByTopicId" parameterType="com.bestv.wechat.liteapp.premierleague.model.Thumbsup">
+        INSERT INTO liteapp_premierleague_comment_thumbsup (
+        <include refid="Comment_Thumbsup_Column_List"/>
+        )VALUES (#{arg0}, #{arg1})
+        ON DUPLICATE KEY UPDATE status=#{arg2}
+    </insert>
 
+    <update id="updateThumbsupCountByCommentId"
+            parameterType="java.lang.Long">
+    update liteapp_premierleague_comment a
+    set a.thumbsup_count=a.thumbsup_count+1
+    where a.id=#{agr0}
+    </update>
+
+    <update id="updateUnThumbsupCountByCommentId"
+            parameterType="java.lang.Long">
+        update liteapp_premierleague_comment a
+        set a.thumbsup_count=a.thumbsup_count-1
+        where a.id=#{agr0}
+    </update>
 </mapper>

@@ -47,9 +47,9 @@ public class SinaTimelineController {
         int iPageSize = Integer.parseInt(request.getParameter("count"));
         long iRange = Long.parseLong(request.getParameter("range"));
         Map<String, Object> mResponse = new HashMap<String, Object>();
-        JSONArray jaSinaTimeline = new JSONArray();
+        JSONArray jaDatas = new JSONArray();
         Map<String, Object> mPageInfo = new HashMap<String, Object>();
-        PageInfo pSinaTimeline = new PageInfo();
+        PageInfo pSinaTimeline;
         String joRsponse = "";
         try {
             if (iRange == 0) {
@@ -101,18 +101,18 @@ public class SinaTimelineController {
                 mSinaTimeline.put("attitudes_count", sinaTimeline.getiAttitudesCount());
                 mSinaTimeline.put("user", mSinaUser);
                 mSinaTimeline.put("pic_urls", jaPicUrls);
-                jaSinaTimeline.add(mSinaTimeline);
+                jaDatas.add(mSinaTimeline);
             }
             mResponse.put("business_code", "successful");
             mResponse.put("description", "");
-            mResponse.put("datas", jaSinaTimeline);
+            mResponse.put("datas", jaDatas);
             mResponse.put("page_info", mPageInfo);
             joRsponse = JSONUtils.toJSONString(mResponse);
         } catch (Exception e) {
             mResponse.put("business_code", "failure");
             mResponse.put("description", e.toString());
-            mResponse.put("datas", jaSinaTimeline);
-            //mResponse.put("page_info", mPageInfo);
+            mResponse.put("datas", jaDatas);
+            mResponse.put("page_info", mPageInfo);
             joRsponse = JSONUtils.toJSONString(mResponse);
             logger.error("微博查询失败", e);
         } finally {

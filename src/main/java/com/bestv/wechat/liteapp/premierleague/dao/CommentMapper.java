@@ -10,5 +10,12 @@ import java.util.List;
 @Repository
 public interface CommentMapper {
     int insertComment(Comment comment);
-    List<Comment> fetchCommentByTopicId(long lTopicId);
+
+    List<Comment> fetchCommentByTopicId(String strTopicId, String strOpenId);
+
+    int thumbsupByTopicId(String strOpenId, long lCommentId, int iOperation);
+
+    int updateThumbsupCountByCommentId(long lCommentId);
+
+    int updateUnThumbsupCountByCommentId(long lCommentId);
 }

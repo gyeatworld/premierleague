@@ -1,0 +1,150 @@
+2017-12-12 15:32:11 207 INFO  org.springframework.boot.StartupInfoLogger restartedMain 
+ Starting PremierleagueApplication on world-peace.local with PID 1709 (/Users/guoyu/IdeaProjects/premierleague/target/classes started by guoyu in /Users/guoyu/IdeaProjects/premierleague)
+2017-12-12 15:32:11 208 INFO  org.springframework.boot.SpringApplication restartedMain 
+ No active profile set, falling back to default profiles: default
+2017-12-12 15:32:11 245 INFO  org.springframework.context.support.AbstractApplicationContext restartedMain 
+ Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e26270: startup date [Tue Dec 12 15:32:11 CST 2017]; root of context hierarchy
+2017-12-12 15:32:11 326 INFO  org.hibernate.validator.internal.util.Version background-preinit 
+ HV000001: Hibernate Validator 5.3.5.Final
+2017-12-12 15:32:12 363 INFO  com.bestv.wechat.liteapp.premierleague.config.DataSourceConfig restartedMain 
+ -------------------- writeDataSource init ---------------------
+2017-12-12 15:32:12 841 INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer restartedMain 
+ Tomcat initialized with port(s): 8080 (http)
+2017-12-12 15:32:12 848 INFO  org.apache.juli.logging.DirectJDKLog restartedMain 
+ Starting service [Tomcat]
+2017-12-12 15:32:12 849 INFO  org.apache.juli.logging.DirectJDKLog restartedMain 
+ Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-12 15:32:13 015 INFO  org.apache.juli.logging.DirectJDKLog localhost-startStop-1 
+ Initializing Spring embedded WebApplicationContext
+2017-12-12 15:32:13 015 INFO  org.springframework.boot.context.embedded.EmbeddedWebApplicationContext localhost-startStop-1 
+ Root WebApplicationContext: initialization completed in 1773 ms
+2017-12-12 15:32:13 214 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean localhost-startStop-1 
+ Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'metricsFilter' to: [/*]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-12-12 15:32:13 218 INFO  org.springframework.boot.web.servlet.AbstractFilterRegistrationBean localhost-startStop-1 
+ Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-12-12 15:32:13 261 INFO  com.bestv.wechat.liteapp.premierleague.config.MybatisConfig restartedMain 
+ --------------------  sqlSessionFactory init ---------------------
+2017-12-12 15:32:13 913 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter restartedMain 
+ Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e26270: startup date [Tue Dec 12 15:32:11 CST 2017]; root of context hierarchy
+2017-12-12 15:32:13 955 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/comment/new],methods=[POST]}" onto void com.bestv.wechat.liteapp.premierleague.controller.CommentController.newComment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:13 955 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/comment/list],methods=[POST]}" onto void com.bestv.wechat.liteapp.premierleague.controller.CommentController.fetchCommentByTopicId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:13 956 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/comment/thumbsup],methods=[POST]}" onto void com.bestv.wechat.liteapp.premierleague.controller.CommentController.thumbsupByTopicId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:13 957 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/user/init],methods=[POST]}" onto void com.bestv.wechat.liteapp.premierleague.controller.LiteappController.initUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:13 957 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/init],methods=[GET]}" onto java.lang.String com.bestv.wechat.liteapp.premierleague.controller.LiteappController.initApp()
+2017-12-12 15:32:13 957 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/auth2/callback],methods=[GET]}" onto void com.bestv.wechat.liteapp.premierleague.controller.SinaAuthController.receiveCode(javax.servlet.http.HttpServletRequest)
+2017-12-12 15:32:13 958 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/timeline/list],methods=[GET]}" onto void com.bestv.wechat.liteapp.premierleague.controller.SinaTimelineController.getSinaTimeLine(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:13 958 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/premierleague/timeline/pull],methods=[GET]}" onto void com.bestv.wechat.liteapp.premierleague.controller.SinaTimelineController.pullSinaTimeLine(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:13 962 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-12 15:32:13 962 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-12 15:32:14 016 INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping restartedMain 
+ Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 15:32:14 016 INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping restartedMain 
+ Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 15:32:14 052 INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping restartedMain 
+ Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-12 15:32:14 468 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 469 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 471 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-12-12 15:32:14 471 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 472 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 473 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-12-12 15:32:14 473 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 473 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-12-12 15:32:14 474 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 474 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-12-12 15:32:14 476 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-12-12 15:32:14 476 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-12-12 15:32:14 476 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 477 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 477 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 478 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-12-12 15:32:14 478 INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry restartedMain 
+ Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-12-12 15:32:14 639 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer restartedMain 
+ LiveReload server is running on port 35729
+2017-12-12 15:32:14 703 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Registering beans for JMX exposure on startup
+2017-12-12 15:32:14 704 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-12-12 15:32:14 709 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-12-12 15:32:14 710 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Registering beans for JMX exposure on startup
+2017-12-12 15:32:14 714 INFO  org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup restartedMain 
+ Starting beans in phase 0
+2017-12-12 15:32:14 715 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+2017-12-12 15:32:14 729 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2017-12-12 15:32:14 736 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2017-12-12 15:32:14 741 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2017-12-12 15:32:14 743 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2017-12-12 15:32:14 744 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2017-12-12 15:32:14 747 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+2017-12-12 15:32:14 752 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2017-12-12 15:32:14 754 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2017-12-12 15:32:14 756 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2017-12-12 15:32:14 757 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2017-12-12 15:32:14 759 INFO  org.springframework.jmx.export.MBeanExporter restartedMain 
+ Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2017-12-12 15:32:14 785 INFO  org.apache.juli.logging.DirectJDKLog restartedMain 
+ Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-12 15:32:14 792 INFO  org.apache.juli.logging.DirectJDKLog restartedMain 
+ Starting ProtocolHandler ["http-nio-8080"]
+2017-12-12 15:32:14 804 INFO  org.apache.juli.logging.DirectJDKLog restartedMain 
+ Using a shared selector for servlet write/read
+2017-12-12 15:32:14 814 INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer restartedMain 
+ Tomcat started on port(s): 8080 (http)
+2017-12-12 15:32:14 819 INFO  org.springframework.boot.StartupInfoLogger restartedMain 
+ Started PremierleagueApplication in 3.824 seconds (JVM running for 4.445)
+2017-12-12 15:32:15 871 INFO  com.alibaba.druid.pool.DruidDataSource RMI TCP Connection(9)-169.254.17.10 
+ {dataSource-1} inited
+2017-12-12 15:32:21 871 INFO  org.springframework.context.support.AbstractApplicationContext Thread-17 
+ Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e26270: startup date [Tue Dec 12 15:32:11 CST 2017]; root of context hierarchy

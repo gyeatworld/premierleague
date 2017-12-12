@@ -10,6 +10,7 @@ public class Comment {
     private String strText;
     private int iSource;
     private int iThumbsupCount;
+    private int iThumbsupAble;
     private Timestamp tCreateTime;
     private Timestamp tUpdateTime;
 
@@ -67,6 +68,14 @@ public class Comment {
 
     public void setiThumbsupCount(int iThumbsupCount) {
         this.iThumbsupCount = iThumbsupCount;
+    }
+
+    public int getiThumbsupAble() {
+        return iThumbsupAble;
+    }
+
+    public void setiThumbsupAble(int iThumbsupAble) {
+        this.iThumbsupAble = iThumbsupAble;
     }
 
     public Timestamp gettCreateTime() {

@@ -73,6 +73,6 @@
             resultMap="ResultMapSinaTimeline">
         SELECT * from liteapp_premierleague_sina_timeline a
         INNER JOIN liteapp_premierleague_sina_user u
-        ON u.id=a.sina_user_id where a.id&lt;=#{0}
+        ON u.id=a.sina_user_id where a.id&lt;=#{arg0}
     </select>
 </mapper>
