@@ -3,6 +3,7 @@ package com.bestv.wechat.liteapp.premierleague.utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -31,10 +32,9 @@ public class AppConfigurationUtil {
 				props.putAll(portalProperties);
 			}
 		} catch (IOException e) {
-			logger.warn("无法读取到配置文件:config.properties");
+			logger.error("无法读取到配置文件:app.properties");
 		}
 	}
-
 	private AppConfigurationUtil() {
 
 	}

@@ -9,6 +9,7 @@ import com.bestv.wechat.liteapp.premierleague.model.SinaUser;
 import com.bestv.wechat.liteapp.premierleague.service.impl.SinaTimelineService;
 import com.bestv.wechat.liteapp.premierleague.utility.JSONUtil;
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,7 +94,7 @@ public class SinaTimelineController {
 
                 //微博
                 mSinaTimeline.put("id", sinaTimeline.getlId());
-                mSinaTimeline.put("text", sinaTimeline.getStrText());
+                mSinaTimeline.put("text", new String(Base64.decodeBase64(sinaTimeline.getStrText()), "utf-8"));
                 mSinaTimeline.put("created_at", sinaTimeline.gettCreatedAt());
                 mSinaTimeline.put("source", sinaTimeline.getStrSource());
                 mSinaTimeline.put("reposts_count", sinaTimeline.getiRepostsCount());

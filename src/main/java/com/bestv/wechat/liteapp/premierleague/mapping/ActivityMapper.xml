@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.ActivityMapper">
+    <resultMap id="ResultMapActivity" type="com.bestv.wechat.liteapp.premierleague.model.Activity">
+        <id column="id" property="iId" jdbcType="INTEGER"/>
+        <result column="title" property="strTitle" jdbcType="VARCHAR"/>
+        <result column="pic_url" property="strPicUrl" jdbcType="VARCHAR"/>
+        <result column="page_url" property="strPageUrl" jdbcType="VARCHAR"/>
+        <result column="status" property="iStatus" jdbcType="TINYINT"/>
+        <result column="create_time" property="tCreateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="tUpdateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Activity_List">
+        *
+    </sql>
+
+    <select id="fetchActivity"
+            resultMap="ResultMapActivity">
+        SELECT <include refid="Base_Activity_List"/>
+        FROM liteapp_premierleague_activity
+        WHERE status=1
+    </select>
+
+</mapper>

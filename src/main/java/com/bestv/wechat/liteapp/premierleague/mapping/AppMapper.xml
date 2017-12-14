@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bestv.wechat.liteapp.premierleague.dao.CommentMapper">
+    <resultMap id="ResultMapAppInit" type="com.bestv.wechat.liteapp.premierleague.model.AppInit">
+
+    </resultMap>
+
+    <sql id="Base_AppInit_List">
+        *
+    </sql>
+
+    <select id="fetchAppInit"
+            resultMap="ResultMapAppInit">
+        SELECT <include refid="Base_AppInit_List"/> FROM  liteapp_premierleague_activity
+    </select>
+
+</mapper>

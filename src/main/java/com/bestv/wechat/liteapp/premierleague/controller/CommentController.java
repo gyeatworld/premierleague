@@ -7,6 +7,7 @@ import com.bestv.wechat.liteapp.premierleague.model.Comment;
 import com.bestv.wechat.liteapp.premierleague.service.impl.CommentService;
 import com.bestv.wechat.liteapp.premierleague.utility.JSONUtil;
 import com.bestv.wechat.liteapp.premierleague.utility.StringUtils;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,7 +85,7 @@ public class CommentController {
             if (StringUtils.hasText(strSessionContent)) {
                 if (StringUtils.hasText(strTopicId) && StringUtils.hasText(strText)) {
                     // 从session中获取openid
-                    String[] strArray = String.valueOf(strSessionContent).split("\\+");
+                    String[] strArray = String.valueOf(strSessionContent).split("\\|\\|");
                     String strOpenId = strArray[1];
                     System.out.println(strOpenId);
 
@@ -176,7 +177,7 @@ public class CommentController {
             String strSessionContent = String.valueOf(session.getAttribute(strSessionId));
             if (StringUtils.hasText(strSessionContent)) {
 
-                String[] strArray = String.valueOf(strSessionContent).split("\\+");
+                String[] strArray = String.valueOf(strSessionContent).split("\\|\\|");
                 String strOpenId = strArray[1];
 
                 if (StringUtils.hasText(strTopicId)) {
@@ -271,7 +272,7 @@ public class CommentController {
             String strSessionContent = String.valueOf(session.getAttribute(strSessionId));
             if (StringUtils.hasText(strSessionContent)) {
 
-                String[] strArray = String.valueOf(strSessionContent).split("\\+");
+                String[] strArray = String.valueOf(strSessionContent).split("\\|\\|");
                 String strOpenId = strArray[1];
 
                 if (StringUtils.hasText(lCommentId)) {

@@ -45,7 +45,7 @@
         on a.id=c.comment_id
         and c.open_id=#{arg1}
         WHERE a.topic_id=#{arg0}
-        order by a.create_time DESC
+        order by concat(a.thumbsup_count,a.create_time) DESC
     </select>
     <insert id="thumbsupByTopicId" parameterType="com.bestv.wechat.liteapp.premierleague.model.Thumbsup">
         INSERT INTO liteapp_premierleague_comment_thumbsup (

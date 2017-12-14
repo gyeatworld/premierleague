@@ -15,6 +15,7 @@ import com.bestv.wechat.liteapp.premierleague.utility.JSONUtil;
 import com.bestv.wechat.liteapp.premierleague.utility.WebUtils;
 
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -77,7 +78,7 @@ public class SinaTimelineFunction {
             }
 
             long lId=Long.parseLong(joTimeline.getString("idstr"));
-            String strText=joTimeline.getString("text");
+            String strText= Base64.encodeBase64String(joTimeline.getString("text").getBytes());
             String strCreateAt=joTimeline.getString("created_at");
             String strRepostsCount=joTimeline.getString("reposts_count");
             String strCommentsCount=joTimeline.getString("comments_count");
